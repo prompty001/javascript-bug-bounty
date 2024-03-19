@@ -8,10 +8,6 @@
 
 	3. cat js_wayback.txt  js_waym_final.txt | anew js_final.txt
 
-NOVA ATUALIZAÇÃO:
-
-	1. echo hackerone.com | waybackurls | grep ".js$" | grep -iEv '\.jsp' | anew js_wayback.txt
-
 #### Active Mode - using Katana
 
 	cat domains.txt | katana -silent -jc | grep ".js$" | httpx -mc 200 | anew js.txt
@@ -47,10 +43,6 @@ NOVA ATUALIZAÇÃO:
 	find . -name "*.js" -print0 | xargs -0 -n1 -P8 sh -c 'js-beautify "$1" | rg -v "(nextjs\.org|reactjs\.org|angular\.io|fonts\.gstatic|instagram\.com|facebook\.com|twitter\.com|tiktok\.com|youtube\.com|w3\.org|\.js|\.json|\.css)" | rg -e "(http|https):\/\/[a-zA-Z0-9.\/?=_-]*"*' xargs-sh
 
 If we need some context, we add `-o` flag on the last **rg** command.
-
-#### Extract sensitive endpoints from JS files
-
-	TA FALTANDO
 
 ---
 ### Finding hidden directory + hidden endpoint in JS codes with xnLinkFinder
