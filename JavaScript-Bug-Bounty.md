@@ -76,7 +76,7 @@ We can even create custom scripts to monitor JS files for changes, like new link
 ---
 ### Check API  Token with Nuclei
 
-	nuclei -t token-spray/ -var token=AIzaSyAQJMKEG9WDELbzJbv9bc80xpLMkyPvj9E
+	nuclei -t token-spray/ -var token=TOKEN_HERE
 
 	https://developers.google.com/maps/documentation/maps-static/overview?hl=pt-br
 
